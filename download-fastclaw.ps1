@@ -31,7 +31,7 @@ Write-Host "Cloning FastClaw repository..." -ForegroundColor Yellow
 # Assuming this repo is the source of truth, you'd clone it. For local test we just copy.
 # In a real scenario: git clone https://github.com/fastclaw/fastclaw.git $CloneDir
 # For demonstration:
-git clone https://github.com/openclaw/openclaw.git $CloneDir
+git clone https://github.com/teo12342/FastClaw.git $CloneDir
 
 Set-Location $CloneDir
 

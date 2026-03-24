@@ -3,15 +3,15 @@
   "version": "2026.2.27",
   "description": "Teola's Custom AI Gateway",
   "keywords": [],
-  "homepage": "https://github.com/fastclaw/fastclaw#readme",
+  "homepage": "https://github.com/teo12342/FastClaw#readme",
   "bugs": {
-    "url": "https://github.com/fastclaw/fastclaw/issues"
+    "url": "https://github.com/teo12342/FastClaw/issues"
   },
   "license": "MIT",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fastclaw/fastclaw.git"
+    "url": "git+https://github.com/teo12342/FastClaw.git"
   },
   "bin": {
     "fastclaw": "fastclaw.mjs"

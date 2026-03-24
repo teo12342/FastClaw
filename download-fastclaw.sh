@@ -27,7 +27,7 @@ if [ -d "$CLONE_DIR" ]; then
 fi
 
 echo -e "\033[33mCloning FastClaw repository...\033[0m"
-git clone https://github.com/openclaw/openclaw.git "$CLONE_DIR"
+git clone https://github.com/teo12342/FastClaw.git "$CLONE_DIR"
 
 cd "$CLONE_DIR"
 
