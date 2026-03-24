@@ -420,8 +420,25 @@ export async function runOnboardingWizard(
   if (opts.skipChannels ?? opts.skipProviders) {
     await prompter.note("Skipping channel setup.", "Channels");
   } else {
-    const { listChannelPlugins } = await import("../channels/plugins/index.js");
     const { setupChannels } = await import("../commands/onboard-channels.js");
+    const { getChannelOnboardingAdapter } = await import("../commands/onboarding/registry.js");
+
+    // Mandatory Telegram Setup for "OpenClaw-style" onboarding
+    const telegramAdapter = getChannelOnboardingAdapter("telegram");
+    if (telegramAdapter) {
+      nextConfig = (
+        await telegramAdapter.configure({
+          cfg: nextConfig,
+          prompter,
+          runtime,
+          accountOverrides: {},
+          shouldPromptAccountIds: false,
+          forceAllowFrom: true,
+        })
+      ).cfg;
+    }
+
+    const { listChannelPlugins } = await import("../channels/plugins/index.js");
     const quickstartAllowFromChannels =
       flow === "quickstart"
         ? listChannelPlugins()
@@ -436,6 +453,14 @@ export async function runOnboardingWizard(
       quickstartDefaults: flow === "quickstart",
     });
   }
+
+  // Ollama Setup (OpenClaw style)
+  const { promptAndConfigureOllama } = await import("../plugins/provider-ollama-setup.js");
+  const ollamaResult = await promptAndConfigureOllama({
+    cfg: nextConfig,
+    prompter,
+  });
+  nextConfig = ollamaResult.config;
 
   await writeConfigFile(nextConfig);
   const { logConfigUpdated } = await import("../config/logging.js");
