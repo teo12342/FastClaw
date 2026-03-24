@@ -46,7 +46,8 @@ export async function findTailscaleBinary(): Promise<string | null> {
 
   // Strategy 1: which command
   try {
-    const { stdout } = await runExec("which", ["tailscale"]);
+    const whichCmd = process.platform === "win32" ? "where" : "which";
+    const { stdout } = await runExec(whichCmd, ["tailscale"]);
     const fromPath = stdout.trim();
     if (fromPath && (await checkBinary(fromPath))) {
       return fromPath;

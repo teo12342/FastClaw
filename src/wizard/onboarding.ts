@@ -423,7 +423,7 @@ export async function runOnboardingWizard(
     const { setupChannels } = await import("../commands/onboard-channels.js");
     const { getChannelOnboardingAdapter } = await import("../commands/onboarding/registry.js");
 
-    // Mandatory Telegram Setup for "OpenClaw-style" onboarding
+    // Mandatory Telegram Setup for "FastClaw-style" onboarding
     const telegramAdapter = getChannelOnboardingAdapter("telegram");
     if (telegramAdapter) {
       nextConfig = (
@@ -454,7 +454,7 @@ export async function runOnboardingWizard(
     });
   }
 
-  // Ollama Setup (OpenClaw style)
+  // Ollama Setup (FastClaw style)
   const { promptAndConfigureOllama } = await import("../plugins/provider-ollama-setup.js");
   const ollamaResult = await promptAndConfigureOllama({
     cfg: nextConfig,
