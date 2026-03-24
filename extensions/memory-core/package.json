@@ -5,7 +5,7 @@
   "description": "FastClaw core memory search plugin",
   "type": "module",
   "peerDependencies": {
-    "fastclaw": ">=2026.1.26"
+    "fastclaw": "workspace:*"
   },
   "fastclaw": {
     "extensions": [

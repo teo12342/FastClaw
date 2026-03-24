@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fastclaw-config
+  labels:
+    app: fastclaw
+data:
+  fastclaw.json: |
+    {
+      "gateway": {
+        "mode": "local",
+        "bind": "loopback",
+        "port": 18789,
+        "auth": {
+          "mode": "token"
+        },
+        "controlUi": {
+          "enabled": true
+        }
+      },
+      "agents": {
+        "defaults": {
+          "workspace": "~/.fastclaw/workspace"
+        },
+        "list": [
+          {
+            "id": "default",
+            "name": "FastClaw Assistant",
+            "workspace": "~/.fastclaw/workspace"
+          }
+        ]
+      },
+      "cron": { "enabled": false }
+    }
+  AGENTS.md: |
+    # FastClaw Assistant
+
+    You are a helpful AI assistant running in Kubernetes.

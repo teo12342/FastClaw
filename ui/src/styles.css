@@ -1,0 +1,93 @@
+@import "./styles/base.css";
+@import "./styles/layout.css";
+@import "./styles/layout.mobile.css";
+@import "./styles/components.css";
+@import "./styles/config.css";
+
+/* ===========================================
+   Premium FastClaw Theme Overrides
+   =========================================== */
+
+:root {
+  --bg: #09090b;
+  --bg-accent: #111116;
+  --card: rgba(18, 18, 24, 0.65);
+  --panel: rgba(9, 9, 11, 0.75);
+  --accent: #6b7aff;
+  --accent-hover: #8e99ff;
+  --accent-glow: rgba(107, 122, 255, 0.5);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+}
+
+:root[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-accent: #f1f5f9;
+  --card: rgba(255, 255, 255, 0.7);
+  --panel: rgba(248, 250, 252, 0.8);
+  --accent: #4f46e5;
+  --accent-hover: #6366f1;
+  --accent-glow: rgba(79, 70, 229, 0.4);
+  --border: rgba(0, 0, 0, 0.06);
+  --border-strong: rgba(0, 0, 0, 0.12);
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(107, 122, 255, 0.15), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(239, 68, 68, 0.1), transparent 40%),
+              var(--bg);
+  background-attachment: fixed;
+}
+
+:root[data-theme="light"] body {
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.08), transparent 40%),
+              var(--bg);
+  background-attachment: fixed;
+}
+
+.card, .stat, .panel, .cron-form-section, .account-card, .status-list > div, .config-section {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover, .stat:hover, .account-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-color: var(--border-strong) !important;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px var(--accent-glow) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow) !important;
+  filter: brightness(1.1);
+}
+
+input, textarea, select {
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border) !important;
+}
+
+:root[data-theme="light"] input, 
+:root[data-theme="light"] textarea, 
+:root[data-theme="light"] select {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-glow) !important;
+}

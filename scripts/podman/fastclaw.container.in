@@ -1,0 +1,26 @@
+# FastClaw gateway — Podman Quadlet (rootless)
+# Installed by setup-podman.sh into fastclaw's ~/.config/containers/systemd/
+# {{FASTCLAW_HOME}} is replaced at install time.
+
+[Unit]
+Description=FastClaw gateway (rootless Podman)
+
+[Container]
+Image=fastclaw:local
+ContainerName=fastclaw
+UserNS=keep-id
+Volume={{FASTCLAW_HOME}}/.fastclaw:/home/node/.fastclaw
+EnvironmentFile={{FASTCLAW_HOME}}/.fastclaw/.env
+Environment=HOME=/home/node
+Environment=TERM=xterm-256color
+PublishPort=18789:18789
+PublishPort=18790:18790
+Pull=never
+Exec=node dist/index.js gateway --bind lan --port 18789
+
+[Service]
+TimeoutStartSec=300
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
