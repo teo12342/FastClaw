@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/openai-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw OpenAI provider plugins",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

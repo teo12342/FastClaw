@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/volcengine-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Volcengine provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

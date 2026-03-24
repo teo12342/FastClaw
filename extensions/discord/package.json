@@ -1,0 +1,11 @@
+{
+  "name": "@fastclaw/discord",
+  "version": "2026.2.27",
+  "description": "FastClaw Discord channel plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

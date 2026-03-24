@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/imessage",
+  "version": "2026.2.27",
+  "private": true,
+  "description": "FastClaw iMessage channel plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

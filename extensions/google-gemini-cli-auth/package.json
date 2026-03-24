@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/google-gemini-cli-auth",
+  "version": "2026.2.27",
+  "private": true,
+  "description": "FastClaw Gemini CLI OAuth provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

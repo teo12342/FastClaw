@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/mistral-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Mistral provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

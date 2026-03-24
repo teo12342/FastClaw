@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/opencode-go-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw OpenCode Go provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

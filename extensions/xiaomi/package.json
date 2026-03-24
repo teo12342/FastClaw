@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/xiaomi-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Xiaomi provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

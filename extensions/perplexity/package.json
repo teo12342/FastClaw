@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/perplexity-plugin",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Perplexity plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

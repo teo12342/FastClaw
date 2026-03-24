@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/elevenlabs-speech",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw ElevenLabs speech plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

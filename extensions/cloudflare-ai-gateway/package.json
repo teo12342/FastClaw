@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/cloudflare-ai-gateway-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Cloudflare AI Gateway provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

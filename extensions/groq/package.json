@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/groq-provider",
+  "version": "2026.3.14",
+  "private": true,
+  "description": "FastClaw Groq media-understanding provider",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

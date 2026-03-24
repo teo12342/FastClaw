@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/brave-plugin",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Brave plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

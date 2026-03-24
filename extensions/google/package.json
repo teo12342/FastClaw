@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/google-plugin",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Google plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

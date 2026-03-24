@@ -1,0 +1,54 @@
+# Protect the ownership rules themselves.
+/.github/CODEOWNERS @steipete
+
+# WARNING: GitHub CODEOWNERS uses last-match-wins semantics.
+# If you add overlapping rules below the secops block, include @fastclaw/secops
+# on those entries too or you can silently remove required secops review.
+# Security-sensitive code, config, and docs require secops review.
+/SECURITY.md @fastclaw/secops
+/.github/dependabot.yml @fastclaw/secops
+/.github/codeql/ @fastclaw/secops
+/.github/workflows/codeql.yml @fastclaw/secops
+/src/security/ @fastclaw/secops
+/src/secrets/ @fastclaw/secops
+/src/config/*secret*.ts @fastclaw/secops
+/src/config/**/*secret*.ts @fastclaw/secops
+/src/gateway/*auth*.ts @fastclaw/secops
+/src/gateway/**/*auth*.ts @fastclaw/secops
+/src/gateway/*secret*.ts @fastclaw/secops
+/src/gateway/**/*secret*.ts @fastclaw/secops
+/src/gateway/security-path*.ts @fastclaw/secops
+/src/gateway/resolve-configured-secret-input-string*.ts @fastclaw/secops
+/src/gateway/protocol/**/*secret*.ts @fastclaw/secops
+/src/gateway/server-methods/secrets*.ts @fastclaw/secops
+/src/agents/*auth*.ts @fastclaw/secops
+/src/agents/**/*auth*.ts @fastclaw/secops
+/src/agents/auth-profiles*.ts @fastclaw/secops
+/src/agents/auth-health*.ts @fastclaw/secops
+/src/agents/auth-profiles/ @fastclaw/secops
+/src/agents/sandbox.ts @fastclaw/secops
+/src/agents/sandbox-*.ts @fastclaw/secops
+/src/agents/sandbox/ @fastclaw/secops
+/src/infra/secret-file*.ts @fastclaw/secops
+/src/cron/stagger.ts @fastclaw/secops
+/src/cron/service/jobs.ts @fastclaw/secops
+/docs/security/ @fastclaw/secops
+/docs/gateway/authentication.md @fastclaw/secops
+/docs/gateway/sandbox-vs-tool-policy-vs-elevated.md @fastclaw/secops
+/docs/gateway/sandboxing.md @fastclaw/secops
+/docs/gateway/secrets-plan-contract.md @fastclaw/secops
+/docs/gateway/secrets.md @fastclaw/secops
+/docs/gateway/security/ @fastclaw/secops
+/docs/cli/approvals.md @fastclaw/secops
+/docs/cli/sandbox.md @fastclaw/secops
+/docs/cli/security.md @fastclaw/secops
+/docs/cli/secrets.md @fastclaw/secops
+/docs/reference/secretref-credential-surface.md @fastclaw/secops
+/docs/reference/secretref-user-supplied-credentials-matrix.json @fastclaw/secops
+
+# Release workflow and its supporting release-path checks.
+/.github/workflows/fastclaw-npm-release.yml @fastclaw/fastclaw-release-managers
+/docs/reference/RELEASING.md @fastclaw/fastclaw-release-managers
+/scripts/fastclaw-npm-publish.sh @fastclaw/fastclaw-release-managers
+/scripts/fastclaw-npm-release-check.ts @fastclaw/fastclaw-release-managers
+/scripts/release-check.ts @fastclaw/fastclaw-release-managers

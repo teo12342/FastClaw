@@ -1,0 +1,15 @@
+{
+  "name": "@fastclaw/memory-core",
+  "version": "2026.2.27",
+  "private": true,
+  "description": "FastClaw core memory search plugin",
+  "type": "module",
+  "peerDependencies": {
+    "fastclaw": ">=2026.1.26"
+  },
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

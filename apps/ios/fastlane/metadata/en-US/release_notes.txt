@@ -1,0 +1,1 @@
+First App Store release of FastClaw for iPhone. Pair with your FastClaw Gateway to use chat, voice, sharing, and device actions from iOS.

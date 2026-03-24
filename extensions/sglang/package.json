@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/sglang-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw SGLang provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

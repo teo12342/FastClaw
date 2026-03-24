@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/ollama-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Ollama provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

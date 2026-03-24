@@ -1,0 +1,14 @@
+// Copy to LocalSigning.xcconfig for personal local signing overrides.
+// This file is only an example and should stay committed.
+
+FASTCLAW_CODE_SIGN_STYLE = Automatic
+FASTCLAW_DEVELOPMENT_TEAM = P5Z8X89DJL
+
+FASTCLAW_APP_BUNDLE_ID = ai.fastclaw.ios.test.mariano
+FASTCLAW_SHARE_BUNDLE_ID = ai.fastclaw.ios.test.mariano.share
+FASTCLAW_WATCH_APP_BUNDLE_ID = ai.fastclaw.ios.test.mariano.watchkitapp
+FASTCLAW_WATCH_EXTENSION_BUNDLE_ID = ai.fastclaw.ios.test.mariano.watchkitapp.extension
+
+// Leave empty with automatic signing.
+FASTCLAW_APP_PROFILE =
+FASTCLAW_SHARE_PROFILE =

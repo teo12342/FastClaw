@@ -1,0 +1,17 @@
+// Default signing values for shared/repo builds.
+// Auto-selected local team overrides live in .local-signing.xcconfig (git-ignored).
+// Manual local overrides can go in LocalSigning.xcconfig (git-ignored).
+
+FASTCLAW_CODE_SIGN_STYLE = Manual
+FASTCLAW_DEVELOPMENT_TEAM = Y5PE65HELJ
+
+FASTCLAW_APP_BUNDLE_ID = ai.fastclaw.ios
+FASTCLAW_SHARE_BUNDLE_ID = ai.fastclaw.ios.share
+
+FASTCLAW_APP_PROFILE = ai.fastclaw.ios Development
+FASTCLAW_SHARE_PROFILE = ai.fastclaw.ios.share Development
+
+// Keep local includes after defaults: xcconfig is evaluated top-to-bottom,
+// so later assignments in local files override the defaults above.
+#include? ".local-signing.xcconfig"
+#include? "LocalSigning.xcconfig"

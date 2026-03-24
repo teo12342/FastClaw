@@ -1,0 +1,12 @@
+{
+  "name": "@fastclaw/kimi-provider",
+  "version": "2026.3.22",
+  "private": true,
+  "description": "FastClaw Kimi provider plugin",
+  "type": "module",
+  "fastclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
